@@ -2,6 +2,8 @@
 
 ## réalisé par Lakhmiri Mohammed Elias
 
+## Sous la supervision du : Pr. AMMOUR Alae
+
 ## Synthèse et analyse spectrale d’une gamme de musique
 
 # Objectifs
