@@ -127,6 +127,37 @@ Les notes de musique produites par un piano peuvent être synthétisées approxi
 
 ![image](https://user-images.githubusercontent.com/53974876/150517510-38b45075-b3d3-4ee1-b810-d9f59e793ab5.png)
 
+```matlab
+%%%%Synthese et analuse spectrale d'une gamme de musique%%%%%
+%La fréquence de chaque note
+   
+   fe=8192;
+   te=1/fe;
+   ts=[0:te:1];
+   dol=262;
+   re=294;
+   mi=330;
+   fa=349;
+   sol=392;
+   la=440;
+   si=494;
+   do2=523;
+   
+   adol=sin(2*dol*pi*ts);
+   are=sin(2*re*pi*ts);  
+   ami=sin(2*mi*pi*ts);
+   afa=sin(2*fa*pi*ts)
+%  afa=sin(2*fa*pi*ts)+sin(2*pi*1000*ts);
+   asol=sin(2*sol*pi*ts);
+   ala=sin(2*la*pi*ts);
+   asi=sin(2*si*pi*ts); 
+   ado2=sin(2*do2*pi*ts);
+   gamme=[adol are ami afa asol ala asi ado2];
+   
 
+```
+2- Utilisez l’outil graphique d’analyse de signaux signalAnalyzer pour visualiser le spectre de votre gamme. Observez les 8 fréquences contenues dans la gamme et vérifiez leur valeur numérique à l’aide des curseurs.
+
+![image](https://user-images.githubusercontent.com/53974876/150519699-47678721-d371-4f11-9519-026886bcf5a7.png)
 
 
