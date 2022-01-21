@@ -160,4 +160,30 @@ Les notes de musique produites par un piano peuvent être synthétisées approxi
 
 ![image](https://user-images.githubusercontent.com/53974876/150519699-47678721-d371-4f11-9519-026886bcf5a7.png)
 
+ 3- Tracez le spectrogramme qui permet de visualiser le contenu fréquentiel du signal au cours du temps (comme le fait une partition de musique) mais la précision sur l’axe des fréquences n’est pas suffisante pour relever précisément les 8 fréquences.
+ 
+![image](https://user-images.githubusercontent.com/53974876/150520250-23b28ce1-e3ab-4cdd-8fa3-8823dc1c5d8d.png)
 
+
+
+Approximation du spectre d’un signal sinusoïdal à temps continu par FFT
+4- Le spectre d’un signal à temps continu peut être approché par transformée de Fourier discrète (TFD) ou sa version rapide (Fast Fourier Transform (FFT). Afficher le spectre de fréquence de la gamme musicale crée en échelle linéaire, puis avec une échelle en décibels.
+
+```matlab
+S=abs(fft(gamme));
+figure(12);
+plot(S);
+u=mag2db(S);
+figure(13);
+fshift=(-length(gamme)/2:length(gamme)/2 -1 )*fe/length(gamme);
+plot(fshift,fftshift(u));
+```
+![image](https://user-images.githubusercontent.com/53974876/150520598-6ec0370c-b8b4-4aa0-99c2-64ef0970030d.png)
+
+on peut Observez les 8 fréquences contenues dans la gamme et vérifiez leur valeur numérique à l’aide des curseurs.
+
+![image](https://user-images.githubusercontent.com/53974876/150520568-6b641673-af55-497a-8dc4-29e8b59f20a6.png)
+
+
+
+# FIN
